@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: whitesmoke;
+  font-family: "Lato", sans-serif;
+  user-select: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container-fluid {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container-fluid h1.title {
+  font-size: 6rem;
+  font-weight: 400;
+  padding: 0.5em 0;
+}
+
+.container-fluid h1.title span {
+  color: red;
+}
+
+.container-fluid .container {
+  width: 450px;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 2.5rem;
+  padding: 1rem;
+}
+
+.container .header {
+  width: 100%;
+  background-color: whitesmoke;
+  border-radius: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  padding: 0.45em 0.91em;
+}
+
+.header .header-time .time {
+  font-weight: bold;
+  font-family: "Gowun Dodum", sans-serif;
+}
+
+.header .header-date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: "Gowun Dodum", sans-serif;
+}
+
+.header .header-date .date,
+.header .header-date .month {
+  color: red;
+  margin-left: 0.42em;
+}
+
+.header .header-icons i {
+  color: red;
+  margin-left: 0.46em;
+  font-size: 1.3rem;
+}
+
+.container .body {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.body .hours-container,
+.body .minutes-container,
+.body .seconds-container,
+.body .am-pm-container {
+  width: 24%;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+
+.body .hours-container {
+  border-top-left-radius: 2.5rem;
+  border-bottom-left-radius: 2.5rem;
+}
+
+.body .am-pm-container {
+  border-top-right-radius: 2.5rem;
+  border-bottom-right-radius: 2.5rem;
+}
+
+.body .hours-container .hours,
+.body .minutes-container .minutes,
+.body .seconds-container .seconds,
+.body .am-pm-container .am-pm {
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+.hours-container .hours-heading,
+.minutes-container .minutes-heading,
+.seconds-container .seconds-heading,
+.am-pm-container .am-pm-heading {
+  font-family: "Gowun Dodum", sans-serif;
+  width: 80%;
+  background-color: red;
+  color: whitesmoke;
+  font-size: 1.2rem;
+  margin-top: 0.45em;
+  padding: 0.25em 0;
+  border-radius: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+}
+
+@media only screen and (max-width: 500px) {
+  .container-fluid .container {
+    width: 88%;
+  }
+
+  .container-fluid h1.title {
+    font-size: 4.5rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  html {
+    font-size: 58%;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .container-fluid .container {
+    width: 90%;
+  }
+
+  .body .hours-container .hours,
+  .body .minutes-container .minutes,
+  .body .seconds-container .seconds,
+  .body .am-pm-container .am-pm {
+    font-size: 3rem;
+  }
+
+  .hours-container .hours-heading,
+  .minutes-container .minutes-heading,
+  .seconds-container .seconds-heading,
+  .am-pm-container .am-pm-heading {
+    font-size: 1.15rem;
+  }
+}
+
+@media only screen and (max-width: 315px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  .container-fluid .container {
+    width: 130px;
+    padding: 0.5rem 1rem;
+  }
+
+  .container-fluid h1.title {
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 1.2em 0;
+  }
+
+  .container .header {
+    justify-content: center;
+    flex-direction: column;
+    background: none;
+    padding: 0;
+  }
+
+  .header .header-time,
+  .header .header-date,
+  .header .header-icons {
+    display: none;
+  }
+
+  .container .body {
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .body .hours-container,
+  .body .minutes-container,
+  .body .seconds-container,
+  .body .am-pm-container {
+    width: 100%;
+    border-radius: 0;
+    margin: 0.5rem;
+  }
+
+  .body .hours-container .hours,
+  .body .minutes-container .minutes,
+  .body .seconds-container .seconds,
+  .body .am-pm-container .am-pm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border: 3px solid #da0606;
+    border-radius: 50em;
+    font-size: 3rem;
+    background-color: red;
+    color: whitesmoke;
+  }
+
+  .body .am-pm-container .am-pm {
+    font-size: 2.5rem;
+  }
+
+  .body .hours-container {
+    border-top-left-radius: 2.5rem;
+    border-top-right-radius: 2.5rem;
+  }
+
+  .body .am-pm-container {
+    border-bottom-left-radius: 2.5rem;
+    border-bottom-right-radius: 2.5rem;
+  }
+
+  .hours-container .hours-heading,
+  .minutes-container .minutes-heading,
+  .seconds-container .seconds-heading,
+  .am-pm-container .am-pm-heading {
+    background: none;
+    color: black;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 0;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 600px) {
+  .container-fluid {
+    height: 50vmax;
+  }
+}
