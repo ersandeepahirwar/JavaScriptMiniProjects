@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  user-select: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+.container-fluid {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container-fluid,
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  width: 300px;
+  height: 200px;
+  border: 7px solid #000000;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px #000000;
+}
+
+.container i {
+  font-size: 8rem;
+  color: #000000;
+  margin-bottom: 0.3em;
+}
+
+.container .color-code {
+  text-align: center;
+  font-size: 1.3rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 400;
+  background-color: #000000;
+  padding: 0.4em 1.6em;
+  border-radius: 20px;
+}
+
+.buttons-container {
+  margin-top: 2rem;
+}
+
+.buttons-container a {
+  color: #fff;
+  background-color: #000000;
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.5em 1em;
+  margin: 0 0.5em;
+  border-radius: 10px;
+  font-weight: 400;
+}
+
+.flipper-container {
+  margin-top: 3rem;
+}
+
+.flipper-container button {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #000000;
+  background-color: transparent;
+  border: 2px solid #000000;
+  padding: 0.3em 0.8em;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 550px) {
+  .container {
+    width: 200px;
+    height: 150px;
+  }
+  .container i {
+    font-size: 5rem;
+  }
+  .container .color-code {
+    font-size: 1.2rem;
+    padding: 0.4em 0.9em;
+  }
+  .buttons-container a {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 250px) {
+  .container {
+    width: 90%;
+  }
+  .container .color-code {
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (max-width: 200px) {
+  .container .color-code {
+    font-size: 1rem;
+  }
+  .buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .buttons-container a {
+    display: block;
+    width: 100px;
+    margin: 0.5rem auto;
+  }
+  .flipper-container {
+    margin-top: 1rem;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .container-fluid {
+    height: 100vmax;
+  }
+}
