@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: lightyellow;
+  user-select: none;
+}
+
+.container-fluid {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  cursor: pointer;
+}
+
+.container img {
+  width: 120px;
+}
+
+.monkey-face,
+.closed-ears,
+.closed-eyes,
+.closed-mouth {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+@media only screen and (max-width: 800px) {
+  .container img {
+    width: 110px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container img {
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width: 250px) {
+  .container img {
+    width: 90px;
+  }
+}
