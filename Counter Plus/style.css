@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: whitesmoke;
+  font-family: "Gowun Dodum", sans-serif;
+  user-select: none;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.container-fluid {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.container-fluid .value-container,
+.container-fluid .buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container-fluid .value-container {
+  width: 200px;
+  height: 100px;
+  border: 5px solid #222222;
+  box-shadow: 0px 0px 3px #111111;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.container-fluid .buttons-container {
+  flex-direction: row;
+  margin-top: 3rem;
+}
+
+.container-fluid .value {
+  font-size: 5rem;
+  color: #222222;
+  font-weight: 600;
+  text-shadow: 0px 0px 1px #111111;
+  letter-spacing: 0.03em;
+}
+
+.buttons-container .btn {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.07em;
+  color: whitesmoke;
+  padding: 0.5em 1em;
+  margin: 0.65em;
+  border: 2px solid white;
+  border-radius: 2em;
+  transition: all 0.3s ease-in-out;
+}
+
+.buttons-container .decrease {
+  background-color: #ff2600;
+  box-shadow: 0px 0px 0.2rem #ff2600;
+}
+
+.buttons-container .decrease:hover {
+  box-shadow: 0px 0px 0.7rem #ff2600;
+}
+
+.buttons-container .reset {
+  background-color: #2213f8;
+  box-shadow: 0px 0px 0.2rem #2213f8;
+}
+
+.buttons-container .reset:hover {
+  box-shadow: 0px 0px 0.7rem #2213f8;
+}
+
+.buttons-container .increase {
+  background-color: #33ec04;
+  box-shadow: 0px 0px 0.2rem #33ec04;
+}
+
+.buttons-container .increase:hover {
+  box-shadow: 0px 0px 0.7rem #33ec04;
+}
+
+@media only screen and (max-width: 550px) {
+  html {
+    font-size: 58%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  html {
+    font-size: 54%;
+  }
+  .container-fluid .value-container {
+    width: 150px;
+    height: 75px;
+    box-shadow: 0px 0px 3px #111111;
+  }
+  .value-container .value {
+    text-shadow: 0px 0px 2px #111111;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .container-fluid .buttons-container {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 200px) {
+  .container-fluid .value-container {
+    width: 120px;
+    height: 60px;
+  }
+  .value-container .value {
+    font-size: 3.5rem;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .container-fluid {
+    height: 50vmax;
+  }
+}
