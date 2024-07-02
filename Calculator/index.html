@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculator built with HTML, CSS and JavaScript by Sandeep Ahirwar">
+    <title>Calculator</title>
+    <link rel="shortcut icon" href="https://i.ibb.co/YbSWkj8/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="calculator">
+        <div id="calculator-parts">
+            <input type="text" id="display" readonly>
+            <div id="keypad">
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="appendKeyToDisplay('7')">7</button>
+                <button onclick="appendKeyToDisplay('8')">8</button>
+                <button onclick="appendKeyToDisplay('9')">9</button>
+                <button onclick="appendKeyToDisplay('+')">+</button>
+                <button onclick="appendKeyToDisplay('4')">4</button>
+                <button onclick="appendKeyToDisplay('5')">5</button>
+                <button onclick="appendKeyToDisplay('6')">6</button>
+                <button onclick="appendKeyToDisplay('-')">-</button>
+                <button onclick="appendKeyToDisplay('1')">1</button>
+                <button onclick="appendKeyToDisplay('2')">2</button>
+                <button onclick="appendKeyToDisplay('3')">3</button>
+                <button onclick="appendKeyToDisplay('*')">*</button>
+                <button onclick="appendKeyToDisplay('0')">0</button>
+                <button onclick="appendKeyToDisplay('.')">.</button>
+                <button onclick="calculate()">=</button>
+                <button onclick="appendKeyToDisplay('/')">/</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

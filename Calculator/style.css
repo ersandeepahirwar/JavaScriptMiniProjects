@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+#calculator {
+  background-color: #e6e6e6;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#calculator-parts {
+  background-color: #262626;
+  padding: 2rem;
+}
+
+#display {
+  background-color: #333333;
+  color: #ffffff;
+  width: 100%;
+  font-size: 2rem;
+  letter-spacing: 0.05em;
+  text-align: right;
+  padding: 2rem;
+}
+
+#keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 2rem 1rem 1rem 1rem;
+}
+
+button {
+  background-color: #4d4d4d;
+  color: #ffffff;
+  font-size: 2rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 20%;
+}
+
+button:hover {
+  background-color: #666666;
+}
+
+button:active {
+  background-color: #808080;
+}
+
+button:nth-child(1),
+button:nth-child(5),
+button:nth-child(9),
+button:nth-child(13),
+button:nth-child(17) {
+  background-color: #ff9f1a;
+}
+
+button:nth-child(1):hover,
+button:nth-child(5):hover,
+button:nth-child(9):hover,
+button:nth-child(13):hover,
+button:nth-child(17):hover {
+  background-color: #ffb54d;
+}
+
+button:nth-child(1):active,
+button:nth-child(5):active,
+button:nth-child(9):active,
+button:nth-child(13):active,
+button:nth-child(17):active {
+  background-color: #ffca80;
+}
+
+button:nth-child(16) {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+button:nth-child(16):hover {
+  background-color: #f2f2f2;
+}
+
+button:nth-child(16):active {
+  background-color: #d9d9d9;
+}
+
+@media screen and (max-width: 350px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  html {
+    font-size: 40%;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  html {
+    font-size: 30%;
+  }
+}
